@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="container home">
       <h1>Hello World!</h1>
-      <p>Welcome to the ATDD Accelerator Template</p>
+      <p>Welcome to the Greeter</p>
       <nav>
         <Link to="/todos">Todo Manager</Link>
       </nav>
