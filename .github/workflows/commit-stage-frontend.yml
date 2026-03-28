@@ -81,9 +81,12 @@ jobs:
         run: npm run lint
         working-directory: frontend
 
-      # TODO: Implement
       - name: Run Code Analysis
-        run: echo "TODO - not yet implemented"
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npx sonar-scanner -Dsonar.projectKey=optivem_greeter-multi-repo-frontend -Dsonar.organization=optivem -Dsonar.sources=src
+        working-directory: frontend
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Build Artifact
         if: github.ref == 'refs/heads/main'
