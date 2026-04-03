@@ -96,6 +96,7 @@ jobs:
           projectBaseDir: frontend
           args: >
             -Dsonar.projectKey=optivem_greeter-multi-repo-frontend
+            -Dsonar.projectName=greeter-multi-repo-frontend
             -Dsonar.organization=optivem
             -Dsonar.sources=src
 
